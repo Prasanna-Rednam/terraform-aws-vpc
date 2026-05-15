@@ -19,10 +19,6 @@ locals {
             var.igw_tags
     )
 
-    az_names = slice(data.aws_avilability_zones.available.name, 0, 2)
-    public_subnet_tags = merge(
-        local.common_tags,
-        # roboshop-dev-public-us-east-1a
-        var.public_subnet_tags
-    )
+    az_names = slice(data.aws_aws_availability_zones.available.name, 0, 2)
+
 }
